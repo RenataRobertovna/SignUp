@@ -1,0 +1,22 @@
+﻿<Window x:Class="AccountWin.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccountWin"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="450" Width="450">
+    <Grid>
+        <TextBlock x:Name="label_Header" HorizontalAlignment="Center" Margin="0,30,0,0" Text="Регистрация" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontFamily="DejaVu Sans" TextAlignment="Center"/>
+        <TextBlock x:Name="label_Login" Text="Логин" HorizontalAlignment="Left" Margin="64,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="input_Login" HorizontalAlignment="Center" Margin="0,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" FontSize="18"/>
+        <TextBlock x:Name="label_Password1" Text="Пароль" HorizontalAlignment="Left" Margin="64,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <PasswordBox x:Name="input_Password1" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Width="322" FontSize="18" PasswordChanged="input_Password1_PasswordChanged"/>
+        <TextBlock x:Name="label_Passwird2" Text="Повторите пароль" HorizontalAlignment="Left" Margin="64,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <PasswordBox x:Name="input_Password2" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Width="322" FontSize="18"/>
+        <Button x:Name="button_Register" Content="Регистрация" HorizontalAlignment="Left" Margin="64,333,0,0" VerticalAlignment="Top" FontSize="18" Click="button_Register_Click"/>
+        <Button x:Name="button_Clear" Content="Очистить" HorizontalAlignment="Center" Margin="0,333,0,0" VerticalAlignment="Top" FontSize="18" Click="button_Clear_Click"/>
+        <Button x:Name="button_Cancel" Content="Отмена" HorizontalAlignment="Left" Margin="319,333,0,0" VerticalAlignment="Top" FontSize="18" Click="button_Cancel_Click"/>
+
+    </Grid>
+</Window>

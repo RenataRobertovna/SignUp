@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountWin", "AccountWin\AccountWin.csproj", "{16A65FBB-5D31-47C4-9503-C2FF9B2C377C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordCheck", "PasswordCheck\PasswordCheck.csproj", "{28E317FD-0E88-4785-B9FA-2978CAC3503B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16A65FBB-5D31-47C4-9503-C2FF9B2C377C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16A65FBB-5D31-47C4-9503-C2FF9B2C377C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16A65FBB-5D31-47C4-9503-C2FF9B2C377C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16A65FBB-5D31-47C4-9503-C2FF9B2C377C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28E317FD-0E88-4785-B9FA-2978CAC3503B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28E317FD-0E88-4785-B9FA-2978CAC3503B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28E317FD-0E88-4785-B9FA-2978CAC3503B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28E317FD-0E88-4785-B9FA-2978CAC3503B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB0D6DF6-E7A5-4FCD-8287-A847FC297900}
+	EndGlobalSection
+EndGlobal
