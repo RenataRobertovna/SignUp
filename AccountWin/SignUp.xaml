@@ -13,10 +13,14 @@
         <TextBlock x:Name="label_Password1" Text="Пароль" HorizontalAlignment="Left" Margin="64,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
         <PasswordBox x:Name="input_Password1" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Width="322" FontSize="18" PasswordChanged="input_Password1_PasswordChanged"/>
         <TextBlock x:Name="label_Passwird2" Text="Повторите пароль" HorizontalAlignment="Left" Margin="64,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
-        <PasswordBox x:Name="input_Password2" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Width="322" FontSize="18"/>
-        <Button x:Name="button_Register" Content="Регистрация" HorizontalAlignment="Left" Margin="64,333,0,0" VerticalAlignment="Top" FontSize="18" Click="button_Register_Click"/>
-        <Button x:Name="button_Clear" Content="Очистить" HorizontalAlignment="Center" Margin="0,333,0,0" VerticalAlignment="Top" FontSize="18" Click="button_Clear_Click"/>
-        <Button x:Name="button_Cancel" Content="Отмена" HorizontalAlignment="Left" Margin="319,333,0,0" VerticalAlignment="Top" FontSize="18" Click="button_Cancel_Click"/>
+        <PasswordBox x:Name="input_Password2" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Width="322" FontSize="18" PasswordChanged="input_Password2_PasswordChanged"/>
+        <Button x:Name="button_Register" Content="Регистрация" HorizontalAlignment="Left" Margin="64,367,0,0" VerticalAlignment="Top" FontSize="18" Click="button_Register_Click"/>
+        <Button x:Name="button_Clear" Content="Очистить" HorizontalAlignment="Center" Margin="0,367,0,0" VerticalAlignment="Top" FontSize="18" Click="button_Clear_Click"/>
+        <Button x:Name="button_Cancel" Content="Отмена" HorizontalAlignment="Left" Margin="319,367,0,0" VerticalAlignment="Top" FontSize="18" Click="button_Cancel_Click"/>
+        <CheckBox x:Name="ch_minlength" Content="Длина пароля меньше 8 символов" HorizontalAlignment="Left" Margin="64,285,0,0" VerticalAlignment="Top" Foreground="#FFFF0C0C"/>
+        <CheckBox x:Name="ch_symbols" Content="Пароль не соответствует требованиям" HorizontalAlignment="Left" Margin="64,305,0,0" VerticalAlignment="Top" Foreground="#FFFF0C0C"/>
+        <CheckBox x:Name="ch_alfabet" Content="Пароль содержит недопустимые символы" HorizontalAlignment="Left" Margin="64,325,0,0" VerticalAlignment="Top" Foreground="#FFFF0C0C"/>
+        <CheckBox x:Name="ch_compare" Content="Пароли не совпадают" HorizontalAlignment="Left" Margin="64,285,0,0" VerticalAlignment="Top" Foreground="#FFFF0C0C" Visibility="Hidden"/>
 
     </Grid>
 </Window>

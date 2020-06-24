@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PasswordCheck\PasswordCheck.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="PasswordCheck">
       <HintPath>..\PasswordCheck\bin\Release\netcoreapp3.1\PasswordCheck.dll</HintPath>
     </Reference>

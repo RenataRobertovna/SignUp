@@ -64,15 +64,70 @@ namespace AccountWin
         
         private void input_Password1_PasswordChanged(object sender, RoutedEventArgs e)
         {
+            ch_minlength.Visibility = Visibility.Visible;
+            ch_symbols.Visibility = Visibility.Visible;
+            ch_alfabet.Visibility = Visibility.Visible;
+            ch_compare.Visibility = Visibility.Hidden;
             Password pass = new Password();
             
             string password = input_Password1.Password;
             if (pass.MinLength(password))
             {
-                
+                ch_minlength.IsChecked = true;
+                ch_minlength.Content = "Число символов удовлетворяет";
+                ch_minlength.Foreground = Brushes.Green;
             }
-            pass.CheckSymbols(password);
-            pass.CheckAlphabet(password);
+            else
+            {
+                ch_minlength.IsChecked = false;
+                ch_minlength.Content = "Длина пароля меньше 8 символов";
+                ch_minlength.Foreground = Brushes.Red;
+            }
+            if (pass.CheckSymbols(password))
+            {
+                ch_symbols.IsChecked = true;
+                ch_symbols.Content = "Пароль удовлетворяет требованиям";
+                ch_symbols.Foreground = Brushes.Green;
+            }
+            else
+            {
+                ch_symbols.IsChecked = false;
+                ch_symbols.Content = "Пароль не удовлетворяет требованиям";
+                ch_symbols.Foreground = Brushes.Red;
+            }
+            if (pass.CheckAlphabet(password))
+            {
+                ch_alfabet.IsChecked = true;
+                ch_alfabet.Content = "Пароль не содержит недопустимых символов";
+                ch_alfabet.Foreground = Brushes.Green;
+            }
+            else
+            {
+                ch_alfabet.IsChecked = false;
+                ch_alfabet.Content = "Пароль содержит недопустимых символов";
+                ch_alfabet.Foreground = Brushes.Red;
+            }
+        }
+
+        private void input_Password2_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            ch_minlength.Visibility = Visibility.Hidden;
+            ch_symbols.Visibility = Visibility.Hidden;
+            ch_alfabet.Visibility = Visibility.Hidden;
+            ch_compare.Visibility = Visibility.Visible;
+
+            if (input_Password2.Password == input_Password1.Password)
+            {
+                ch_compare.IsChecked = true;
+                ch_compare.Content = "Пароли совпадают";
+                ch_compare.Foreground = Brushes.Green;
+            }
+            else
+            {
+                ch_compare.IsChecked = false;
+                ch_compare.Content = "Пароли не совпадают";
+                ch_compare.Foreground = Brushes.Red;
+            }
         }
     }
 }
