@@ -31,19 +31,19 @@ namespace AccountWin
             var login = input_Login.Text;
             var password = input_Password.Password;
             
-            var host = "mysql11.hostland.ru";
-            var database = "host1323541_suptest2";
-            var port = "3306";
-            var username = "host1323541_itstep";
-            var pass = "269f43dc";
-            var ConnString = "Server=" + host + ";Database=" + database + ";port=" + port + ";User Id=" + username + ";password=" + pass;
+            const string host = "mysql11.hostland.ru";
+            const string database = "host1323541_suptest2";
+            const string port = "3306";
+            const string username = "host1323541_itstep";
+            const string pass = "269f43dc";
+            const string ConnString = "Server=" + host + ";Database=" + database + ";port=" + port + ";User Id=" + username + ";password=" + pass;
             
-            MySqlConnection db = new MySqlConnection(ConnString);
+            var db = new MySqlConnection(ConnString);
             db.Open();
 
-            string sql = $"SELECT login, pass FROM Account WHERE login = '{login}'";
-            MySqlCommand command = new MySqlCommand {Connection = db, CommandText = sql};
-            MySqlDataReader result = command.ExecuteReader();
+            var sql = $"SELECT login, pass FROM Account WHERE login = '{login}'";
+            var command = new MySqlCommand {Connection = db, CommandText = sql};
+            var result = command.ExecuteReader();
 
             if (!result.Read())
             {
