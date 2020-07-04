@@ -1,8 +1,9 @@
 ﻿using System;
+using System.IO;
 
 namespace PasswordCheck
 {
-    public delegate void Message(string messagr);
+    public delegate void Message(string message);
 
     public class Password
     {
@@ -20,12 +21,44 @@ namespace PasswordCheck
 
         public Password()
         {
+            /*
             length = 8;
             symbols1 = "QWERTYUIOPASDFGHJKLZXCVBNM";
             symbols2 = "qwertyuiopasdfghjklzxcvbnm";
             symbols3 = "!@#$%^&*+-:;,._";
             symbols4 = "0123456789";
+            */
 
+            using (StreamReader file = new StreamReader("password.ini"))
+            {
+                string tempLine;
+                while ((tempLine = file.ReadLine()) != null)
+                {
+                    int tempIndex = tempLine.IndexOf(':');
+                    if (tempIndex == -1) continue;
+                    string tempVar = tempLine.Substring(0, tempIndex);
+                    string tempSymbols = tempLine.Substring(tempIndex + 1);
+                    switch (tempVar)
+                    {
+                        case "length":
+                            length = Convert.ToInt32(tempSymbols);
+                            break;
+                        case "symbols1":
+                            symbols1 = tempSymbols;
+                            break;
+                        case "symbols2":
+                            symbols2 = tempSymbols;
+                            break;
+                        case "symbols3":
+                            symbols3 = tempSymbols;
+                            break;
+                        case "symbols4":
+                            symbols4 = tempSymbols;
+                            break;
+                    }
+                }
+            }
+            
             symbols = symbols1 + symbols2 + symbols3 + symbols4;
         }
 
